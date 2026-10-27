@@ -1,0 +1,34 @@
+
+name: EazeBill ASP.NET MVC Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v2
+
+      - name: Restore NuGet packages
+        run: nuget restore StoreBilling.sln
+
+      - name: Build ASP.NET MVC application
+        run: msbuild StoreBilling.sln /p:Configuration=Release /p:DeployOnBuild=false /m
