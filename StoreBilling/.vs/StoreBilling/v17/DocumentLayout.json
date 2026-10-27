@@ -1,0 +1,880 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|d:\\kavitha\\storebilling\\storebilling\\views\\purchases\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:views\\purchases\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\views\\purchases\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:views\\purchases\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\controllers\\purchasescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:controllers\\purchasescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1111111-1111-1111-1111-111111111111}|..\\StoreBilling.Data\\StoreBilling.Data.csproj|d:\\kavitha\\storebilling\\storebilling.data\\storedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1111111-1111-1111-1111-111111111111}|..\\StoreBilling.Data\\StoreBilling.Data.csproj|d:\\kavitha\\storebilling\\storebilling.data\\entities\\purchaseinvoiceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1111111-1111-1111-1111-111111111111}|..\\StoreBilling.Data\\StoreBilling.Data.csproj|d:\\kavitha\\storebilling\\storebilling.data\\entities\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1111111-1111-1111-1111-111111111111}|..\\StoreBilling.Data\\StoreBilling.Data.csproj|d:\\kavitha\\storebilling\\storebilling.data\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1111111-1111-1111-1111-111111111111}|..\\StoreBilling.Data\\StoreBilling.Data.csproj|d:\\kavitha\\storebilling\\storebilling.data\\entities\\accounts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\models\\viewmodels\\accountsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:models\\viewmodels\\accountsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\views\\products\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:views\\products\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\views\\inventory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:views\\inventory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\controllers\\inventorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:controllers\\inventorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\views\\accounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:views\\accounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|StoreBilling.Common||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|StoreBilling.Data||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|StoreBilling.Services||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\views\\reports\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:views\\reports\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\views\\pos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:views\\pos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\models\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:models\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\views\\suppliers\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:views\\suppliers\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\views\\suppliers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:views\\suppliers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\views\\customers\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:views\\customers\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\views\\customers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:views\\customers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1111111-1111-1111-1111-111111111111}|..\\StoreBilling.Data\\StoreBilling.Data.csproj|d:\\kavitha\\storebilling\\storebilling.data\\entities\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1111111-1111-1111-1111-111111111111}|..\\StoreBilling.Data\\StoreBilling.Data.csproj|d:\\kavitha\\storebilling\\storebilling.data\\entities\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\controllers\\supplierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:controllers\\supplierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1111111-1111-1111-1111-111111111111}|..\\StoreBilling.Data\\StoreBilling.Data.csproj|d:\\kavitha\\storebilling\\storebilling.data\\entities\\tax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1111111-1111-1111-1111-111111111111}|..\\StoreBilling.Data\\StoreBilling.Data.csproj|d:\\kavitha\\storebilling\\storebilling.data\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\controllers\\poscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:controllers\\poscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1111111-1111-1111-1111-111111111111}|..\\StoreBilling.Data\\StoreBilling.Data.csproj|d:\\kavitha\\storebilling\\storebilling.data\\entities\\salesinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3333333-3333-3333-3333-333333333333}|..\\StoreBilling.Common\\StoreBilling.Common.csproj|d:\\kavitha\\storebilling\\storebilling.common\\constants\\appconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|D:\\KAVITHA\\StoreBilling\\StoreBilling\\models\\viewmodels\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{779C209E-06E6-46EC-B176-731DF1627889}|StoreBilling.csproj|solutionrelative:models\\viewmodels\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2222222-2222-2222-2222-222222222222}|..\\StoreBilling.Services\\StoreBilling.Services.csproj|d:\\kavitha\\storebilling\\storebilling.services\\implementations\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2222222-2222-2222-2222-222222222222}|..\\StoreBilling.Services\\StoreBilling.Services.csproj|d:\\kavitha\\storebilling\\storebilling.services\\dtos\\productstockdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2222222-2222-2222-2222-222222222222}|..\\StoreBilling.Services\\StoreBilling.Services.csproj|d:\\kavitha\\storebilling\\storebilling.services\\interfaces\\iinventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1111111-1111-1111-1111-111111111111}|..\\StoreBilling.Data\\StoreBilling.Data.csproj|d:\\kavitha\\storebilling\\storebilling.data\\entities\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1111111-1111-1111-1111-111111111111}|..\\StoreBilling.Data\\StoreBilling.Data.csproj|d:\\kavitha\\storebilling\\storebilling.data\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1111111-1111-1111-1111-111111111111}|..\\StoreBilling.Data\\StoreBilling.Data.csproj|d:\\kavitha\\storebilling\\storebilling.data\\entities\\inventorytransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1111111-1111-1111-1111-111111111111}|..\\StoreBilling.Data\\StoreBilling.Data.csproj|d:\\kavitha\\storebilling\\storebilling.data\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3333333-3333-3333-3333-333333333333}|..\\StoreBilling.Common\\StoreBilling.Common.csproj|d:\\kavitha\\storebilling\\storebilling.common\\enum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\PurchaseInvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Purchases\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Purchases\\Create.cshtml",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Purchases\\Create.cshtml",
+              "RelativeToolTip": "Views\\Purchases\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-22T09:47:20.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Purchases\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Purchases\\Index.cshtml",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Purchases\\Index.cshtml",
+              "RelativeToolTip": "Views\\Purchases\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-22T09:46:37.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PurchasesController.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Controllers\\PurchasesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PurchasesController.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Controllers\\PurchasesController.cs",
+              "RelativeToolTip": "Controllers\\PurchasesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T09:43:26.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PurchaseInvoiceItem.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\PurchaseInvoiceItem.cs",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Data\\Entities\\PurchaseInvoiceItem.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\PurchaseInvoiceItem.cs",
+              "RelativeToolTip": "..\\StoreBilling.Data\\Entities\\PurchaseInvoiceItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T09:36:09.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwC0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-10-17T10:02:21.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "StoreBilling.Services",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Services\\StoreBilling.Services.csproj",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Services\\StoreBilling.Services.csproj",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Services\\StoreBilling.Services.csproj",
+              "RelativeToolTip": "..\\StoreBilling.Services\\StoreBilling.Services.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-17T08:36:45.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "StoreBilling.Data",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\StoreBilling.Data.csproj",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Data\\StoreBilling.Data.csproj",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\StoreBilling.Data.csproj",
+              "RelativeToolTip": "..\\StoreBilling.Data\\StoreBilling.Data.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-17T08:36:41.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Site.css",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Content\\Site.css",
+              "RelativeDocumentMoniker": "Content\\Site.css",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Content\\Site.css",
+              "RelativeToolTip": "Content\\Site.css",
+              "ViewState": "AgIAABUAAAAAAAAAAAAIwCkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-17T10:18:24.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Form.cshtml",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Products\\Form.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\Form.cshtml",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Products\\Form.cshtml",
+              "RelativeToolTip": "Views\\Products\\Form.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-17T10:30:21.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "InventoryController.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Controllers\\InventoryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\InventoryController.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Controllers\\InventoryController.cs",
+              "RelativeToolTip": "Controllers\\InventoryController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAuwDMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T07:17:21.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-17T10:18:55.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\Customer.cs",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Data\\Entities\\Customer.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\Customer.cs",
+              "RelativeToolTip": "..\\StoreBilling.Data\\Entities\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T09:14:09.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StoreDbContext.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\StoreDbContext.cs",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Data\\StoreDbContext.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\StoreDbContext.cs",
+              "RelativeToolTip": "..\\StoreBilling.Data\\StoreDbContext.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T09:15:45.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountsController.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "Controllers\\AccountsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T07:06:09.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Supplier.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\Supplier.cs",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Data\\Entities\\Supplier.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\Supplier.cs",
+              "RelativeToolTip": "..\\StoreBilling.Data\\Entities\\Supplier.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAQwAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T09:15:11.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Accounts.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\Accounts.cs",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Data\\Entities\\Accounts.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\Accounts.cs",
+              "RelativeToolTip": "..\\StoreBilling.Data\\Entities\\Accounts.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwCAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T07:03:53.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AccountsViewModel.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Models\\ViewModels\\AccountsViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\AccountsViewModel.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Models\\ViewModels\\AccountsViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\AccountsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T07:07:23.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Accounts\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Accounts\\Index.cshtml",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Accounts\\Index.cshtml",
+              "RelativeToolTip": "Views\\Accounts\\Index.cshtml",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAgwJMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-20T07:13:51.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Inventory\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Inventory\\Index.cshtml",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Inventory\\Index.cshtml",
+              "RelativeToolTip": "Views\\Inventory\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAgwDEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-20T07:18:15.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "StoreBilling.Common",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Common\\StoreBilling.Common.csproj",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Common\\StoreBilling.Common.csproj",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Common\\StoreBilling.Common.csproj",
+              "RelativeToolTip": "..\\StoreBilling.Common\\StoreBilling.Common.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-17T08:36:13.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "_Sidebar.cshtml",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Shared\\_Sidebar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Sidebar.cshtml",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Shared\\_Sidebar.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Sidebar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-17T10:22:10.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowBUAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T12:26:08.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAjwBgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T10:24:05.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAiwIIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-17T10:24:29.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Data\\Entities\\BaseEntity.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\BaseEntity.cs",
+              "RelativeToolTip": "..\\StoreBilling.Data\\Entities\\BaseEntity.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAgwA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T08:41:13.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "CustomersController.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Controllers\\CustomersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CustomersController.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Controllers\\CustomersController.cs",
+              "RelativeToolTip": "Controllers\\CustomersController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA8wBsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T10:55:51.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "SuppliersController.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Controllers\\SuppliersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SuppliersController.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Controllers\\SuppliersController.cs",
+              "RelativeToolTip": "Controllers\\SuppliersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T10:56:27.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ReportsController.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Controllers\\ReportsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReportsController.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Controllers\\ReportsController.cs",
+              "RelativeToolTip": "Controllers\\ReportsController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAjwBYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T12:10:10.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Web.config",
+              "RelativeDocumentMoniker": "Views\\Web.config",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Web.config",
+              "RelativeToolTip": "Views\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-10-17T12:21:40.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-17T12:27:49.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "POSController.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Controllers\\POSController.cs",
+              "RelativeDocumentMoniker": "Controllers\\POSController.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Controllers\\POSController.cs",
+              "RelativeToolTip": "Controllers\\POSController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAuwCYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T10:57:03.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Reports\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reports\\Index.cshtml",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Reports\\Index.cshtml",
+              "RelativeToolTip": "Views\\Reports\\Index.cshtml",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAgwGwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-17T12:11:30.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Form.cshtml",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Suppliers\\Form.cshtml",
+              "RelativeDocumentMoniker": "Views\\Suppliers\\Form.cshtml",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Suppliers\\Form.cshtml",
+              "RelativeToolTip": "Views\\Suppliers\\Form.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAgwBMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-17T11:29:27.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Models\\ViewModels\\DashboardViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\DashboardViewModel.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Models\\ViewModels\\DashboardViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\DashboardViewModel.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA8wBkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T11:39:34.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\POS\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\POS\\Index.cshtml",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\POS\\Index.cshtml",
+              "RelativeToolTip": "Views\\POS\\Index.cshtml",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAgwKoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-17T10:57:50.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "PurchaseInvoice.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\PurchaseInvoice.cs",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Data\\Entities\\PurchaseInvoice.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\PurchaseInvoice.cs",
+              "RelativeToolTip": "..\\StoreBilling.Data\\Entities\\PurchaseInvoice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T11:37:38.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Customers\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Customers\\Index.cshtml",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Customers\\Index.cshtml",
+              "RelativeToolTip": "Views\\Customers\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAgwB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-17T11:27:28.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Form.cshtml",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Customers\\Form.cshtml",
+              "RelativeDocumentMoniker": "Views\\Customers\\Form.cshtml",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Customers\\Form.cshtml",
+              "RelativeToolTip": "Views\\Customers\\Form.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAgwAUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-17T11:28:06.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Suppliers\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Suppliers\\Index.cshtml",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Suppliers\\Index.cshtml",
+              "RelativeToolTip": "Views\\Suppliers\\Index.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-17T11:28:50.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Brand.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\Brand.cs",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Data\\Entities\\Brand.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\Brand.cs",
+              "RelativeToolTip": "..\\StoreBilling.Data\\Entities\\Brand.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T08:46:13.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Unit.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\Unit.cs",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Data\\Entities\\Unit.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\Unit.cs",
+              "RelativeToolTip": "..\\StoreBilling.Data\\Entities\\Unit.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T09:11:53.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Tax.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\Tax.cs",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Data\\Entities\\Tax.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\Tax.cs",
+              "RelativeToolTip": "..\\StoreBilling.Data\\Entities\\Tax.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T09:12:23.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\Index.cshtml",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Views\\Products\\Index.cshtml",
+              "RelativeToolTip": "Views\\Products\\Index.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwBsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-17T10:29:39.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAuwEoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T10:28:29.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "SalesInvoice.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\SalesInvoice.cs",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Data\\Entities\\SalesInvoice.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\SalesInvoice.cs",
+              "RelativeToolTip": "..\\StoreBilling.Data\\Entities\\SalesInvoice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T10:51:20.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "AppConstants.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Common\\Constants\\AppConstants.cs",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Common\\Constants\\AppConstants.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Common\\Constants\\AppConstants.cs",
+              "RelativeToolTip": "..\\StoreBilling.Common\\Constants\\AppConstants.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T10:37:14.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "ProductViewModel.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Models\\ViewModels\\ProductViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\ProductViewModel.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling\\Models\\ViewModels\\ProductViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\ProductViewModel.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwDkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T10:27:45.113Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "ProductStockDto.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Services\\DTOs\\ProductStockDto.cs",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Services\\DTOs\\ProductStockDto.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Services\\DTOs\\ProductStockDto.cs",
+              "RelativeToolTip": "..\\StoreBilling.Services\\DTOs\\ProductStockDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T10:00:37.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "IInventoryService.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Services\\Interfaces\\IInventoryService.cs",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Services\\Interfaces\\IInventoryService.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Services\\Interfaces\\IInventoryService.cs",
+              "RelativeToolTip": "..\\StoreBilling.Services\\Interfaces\\IInventoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T09:46:20.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "InventoryService.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Services\\Implementations\\InventoryService.cs",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Services\\Implementations\\InventoryService.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Services\\Implementations\\InventoryService.cs",
+              "RelativeToolTip": "..\\StoreBilling.Services\\Implementations\\InventoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T09:36:21.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "InventoryTransaction.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\InventoryTransaction.cs",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Data\\Entities\\InventoryTransaction.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\InventoryTransaction.cs",
+              "RelativeToolTip": "..\\StoreBilling.Data\\Entities\\InventoryTransaction.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAwwBQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T09:13:31.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Store.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\Store.cs",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Data\\Entities\\Store.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\Store.cs",
+              "RelativeToolTip": "..\\StoreBilling.Data\\Entities\\Store.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T08:43:14.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Data\\Entities\\Product.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\Product.cs",
+              "RelativeToolTip": "..\\StoreBilling.Data\\Entities\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T09:12:54.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\Category.cs",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Data\\Entities\\Category.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Data\\Entities\\Category.cs",
+              "RelativeToolTip": "..\\StoreBilling.Data\\Entities\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T08:44:12.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Enum.cs",
+              "DocumentMoniker": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Common\\Enum.cs",
+              "RelativeDocumentMoniker": "..\\StoreBilling.Common\\Enum.cs",
+              "ToolTip": "D:\\KAVITHA\\StoreBilling\\StoreBilling.Common\\Enum.cs",
+              "RelativeToolTip": "..\\StoreBilling.Common\\Enum.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T09:34:47.806Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

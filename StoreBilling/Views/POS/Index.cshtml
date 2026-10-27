@@ -1,0 +1,306 @@
+﻿@{ ViewBag.Title = "POS Billing"; }
+
+<div class="pos-container">
+    <!-- Left: Search & Cart -->
+    <div class="pos-left">
+
+        <!-- Search Box with Dropdown -->
+        <div class="card p-3 border-0 shadow-sm mb-3" style="position: relative; z-index: 1050;">
+            <div class="input-group">
+                <span class="input-group-text bg-white border-end-0"><i class="fa-solid fa-barcode text-primary fs-5"></i></span>
+                <input type="text" id="searchBox" class="form-control form-control-lg border-start-0 ps-0" placeholder="Scan Barcode or Type Name (F2)..." autofocus autocomplete="off" />
+            </div>
+            <!-- The Dropdown List -->
+            <div id="searchResults" class="search-results-container"></div>
+        </div>
+
+        <!-- Cart -->
+        <div class="cart-card" style="flex: 1; overflow-y: auto;">
+            <table class="table cart-table mb-0" id="cartTable">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th width="110">Qty</th>
+                        <th width="120">Price</th>
+                        <th width="120" class="text-end">Total</th>
+                        <th width="50"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="5" class="text-center text-muted py-5"><i class="fa-solid fa-cart-shopping fa-3x mb-3 text-light"></i><br>Search or scan a product to start billing.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Right: Checkout Summary -->
+    <div class="pos-right">
+        <div class="summary-card h-100 d-flex flex-column">
+            <h5 class="fw-bold mb-3 border-bottom pb-2">Customer Details</h5>
+            <input type="text" id="customerName" class="form-control mb-3" placeholder="Walk-in Customer" />
+
+            <h5 class="fw-bold mb-3 mt-4 border-bottom pb-2">Bill Summary</h5>
+            <div class="d-flex justify-content-between mb-2 text-muted"><span>Subtotal</span><span id="lblSub">₹0.00</span></div>
+            <div class="d-flex justify-content-between mb-2 text-muted"><span>Tax (GST 5%)</span><span id="lblTax">₹0.00</span></div>
+
+            <hr />
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <span class="fs-5 fw-bold">Total</span>
+                <span class="summary-total" id="lblTotal">₹0.00</span>
+            </div>
+
+            <div class="mb-3">
+                <label class="text-muted mb-1 small text-uppercase">Payment Mode</label>
+                <select id="paymentMethod" class="form-select form-select-lg fw-bold text-primary">
+                    <option value="Cash">💵 Cash</option>
+                    <option value="UPI">📱 UPI</option>
+                    <option value="Card">💳 Card</option>
+                </select>
+            </div>
+
+            <div class="mt-auto">
+                <button class="btn btn-primary w-100 py-3 fs-5 rounded-3 shadow-sm" onclick="saveBill()">
+                    <i class="fa-solid fa-check-circle me-2"></i> Pay & Save <span class="hotkey-badge bg-white text-dark ms-2">F9</span>
+                </button>
+                <button class="btn btn-outline-danger w-100 mt-2 rounded-3" onclick="clearCart()">
+                    <i class="fa-solid fa-trash me-2"></i> Clear Cart <span class="hotkey-badge ms-2">ESC</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        let cart = [];
+        let searchTimeout = null;
+        let activeIndex = -1; // Tracks the currently highlighted item
+        let currentSearchResults = []; // Stores the current search results
+
+        // Keyboard Shortcuts
+        $(document).on('keydown', function (e) {
+            if (e.key === 'F2') { e.preventDefault(); $('#searchBox').focus(); }
+            if (e.key === 'F9') { e.preventDefault(); saveBill(); }
+            if (e.key === 'Escape') { e.preventDefault(); clearCart(); $('#searchBox').val('').focus(); $('#searchResults').hide(); }
+        });
+
+        // Handle Typing (Live Search)
+        $('#searchBox').on('keyup', function (e) {
+            // Ignore arrow keys and enter key here
+            if (e.which === 38 || e.which === 40 || e.which === 13) return;
+
+            let term = $(this).val().trim();
+            clearTimeout(searchTimeout);
+
+            if (term.length < 1) {
+                $('#searchResults').hide().empty();
+                currentSearchResults = [];
+                activeIndex = -1;
+                return;
+            }
+
+            searchTimeout = setTimeout(function () {
+                $.get('/POS/SearchProduct', { term: term }, function (data) {
+                    currentSearchResults = data;
+                    renderDropdown(data);
+                });
+            }, 200);
+        });
+
+        // Handle Arrow Keys & Enter Key
+        $('#searchBox').on('keydown', function (e) {
+            let items = $('#searchResults .search-item');
+
+            if (e.key === 'ArrowDown') {
+                e.preventDefault(); // Stop cursor from moving to end of text
+                if (items.length === 0) return;
+                activeIndex++;
+                if (activeIndex >= items.length) activeIndex = 0; // Loop to top
+                highlightItem(items);
+            }
+            else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (items.length === 0) return;
+                activeIndex--;
+                if (activeIndex < 0) activeIndex = items.length - 1; // Loop to bottom
+                highlightItem(items);
+            }
+            else if (e.key === 'Enter') {
+                e.preventDefault();
+
+                // If user selected an item with arrow keys
+                if (activeIndex >= 0 && items.length > 0) {
+                    let p = currentSearchResults[activeIndex];
+                    selectProduct(p.Id, p.Name, p.SellingRate, p.Stock);
+                }
+                // Otherwise, fallback to exact barcode scan logic
+                else {
+                    let term = $(this).val().trim();
+                    if (!term) return;
+                    $.get('/POS/SearchProduct', { term: term }, function (data) {
+                        if (data.length > 0) {
+                            let exactMatch = data.find(p => p.Barcode === term) || data[0];
+                            selectProduct(exactMatch.Id, exactMatch.Name, exactMatch.SellingRate, exactMatch.Stock);
+                        } else {
+                            Swal.fire({ title: 'Not Found', text: 'Product not found.', icon: 'error', toast: true, position: 'top-end', showConfirmButton: false, timer: 2000 });
+                        }
+                    });
+                }
+            }
+        });
+
+        function highlightItem(items) {
+            items.removeClass('active');
+            if (activeIndex >= 0) {
+                let selected = $(items[activeIndex]).addClass('active');
+
+                // Auto-scroll the dropdown to keep the highlighted item visible
+                let container = $('#searchResults');
+                let itemTop = selected.position().top;
+                let containerScroll = container.scrollTop();
+                let containerHeight = container.height();
+
+                if (itemTop < containerScroll) {
+                    container.scrollTop(itemTop);
+                } else if (itemTop + 50 > containerScroll + containerHeight) {
+                    container.scrollTop(itemTop + 50 - containerHeight);
+                }
+            }
+        }
+
+        function renderDropdown(products) {
+            let dropdown = $('#searchResults');
+            dropdown.empty();
+            activeIndex = -1; // Reset highlight on new search
+
+            if (products.length === 0) {
+                dropdown.append('<div class="p-3 text-muted text-center">No products found.</div>');
+                dropdown.show();
+                return;
+            }
+
+            products.forEach((p, index) => {
+                let stockColor = p.Stock <= 0 ? 'text-danger' : 'text-success';
+                dropdown.append(`
+                    <div class="search-item" onclick="selectProduct(${p.Id}, '${p.Name.replace(/'/g, "\\'")}', ${p.SellingRate}, ${p.Stock})">
+                        <div>
+                            <div class="search-item-name">${p.Name}</div>
+                            <div class="search-item-stock">Stock: <span class="${stockColor} fw-bold">${p.Stock}</span> | Barcode: ${p.Barcode || 'N/A'}</div>
+                        </div>
+                        <div class="search-item-price">₹${p.SellingRate.toFixed(2)}</div>
+                    </div>
+                `);
+            });
+
+            dropdown.show();
+        }
+
+        // Hide dropdown if clicking outside
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('#searchBox').length && !$(e.target).closest('#searchResults').length) {
+                $('#searchResults').hide();
+            }
+        });
+
+        function selectProduct(id, name, price, stock) {
+            if (stock <= 0) {
+                Swal.fire({ title: 'Out of Stock', text: 'You cannot sell this item because stock is 0!', icon: 'error', toast: true, position: 'top-end', showConfirmButton: false, timer: 3000 });
+                return;
+            }
+
+            let ex = cart.find(c => c.Id === id);
+            if (ex) {
+                if (ex.Qty >= stock) {
+                    Swal.fire({ title: 'Limit Reached', text: 'Only ' + stock + ' items available in stock!', icon: 'warning', toast: true, position: 'top-end', showConfirmButton: false, timer: 3000 });
+                    return;
+                }
+                ex.Qty++;
+            }
+            else {
+                cart.push({ Id: id, Name: name, Price: price, Qty: 1, MaxStock: stock });
+            }
+
+            renderCart();
+            $('#searchBox').val('').focus();
+            $('#searchResults').hide();
+            activeIndex = -1;
+        }
+
+        function renderCart() {
+            // ... (Keep existing renderCart code exactly as it is) ...
+            let tbody = $('#cartTable tbody'); tbody.empty();
+            let sub = 0;
+
+            if (cart.length === 0) {
+                tbody.append(`<tr><td colspan="5" class="text-center text-muted py-5"><i class="fa-solid fa-cart-shopping fa-3x mb-3 text-light"></i><br>Search or scan a product to start billing.</td></tr>`);
+            } else {
+                cart.forEach((item, index) => {
+                    let total = item.Price * item.Qty; sub += total;
+                    tbody.append(`
+                        <tr>
+                            <td class="fw-bold">${item.Name}</td>
+                            <td>
+                                <div class="input-group input-group-sm">
+                                    <button class="btn btn-outline-secondary" onclick="changeQty(${index}, -1)">-</button>
+                                    <input type="text" class="form-control text-center fw-bold" value="${item.Qty}" readonly />
+                                    <button class="btn btn-outline-secondary" onclick="changeQty(${index}, 1)">+</button>
+                                </div>
+                            </td>
+                            <td>₹${item.Price.toFixed(2)}</td>
+                            <td class="text-end fw-bold">₹${total.toFixed(2)}</td>
+                            <td><button class="btn btn-sm btn-light text-danger" onclick="removeItem(${index})"><i class="fa-solid fa-xmark"></i></button></td>
+                        </tr>
+                    `);
+                });
+            }
+
+            let tax = sub * 0.05;
+            let grand = sub + tax;
+
+            $('#lblSub').text('₹' + sub.toFixed(2));
+            $('#lblTax').text('₹' + tax.toFixed(2));
+            $('#lblTotal').text('₹' + grand.toFixed(2));
+        }
+
+        function changeQty(index, amount) {
+            let item = cart[index];
+            if (amount > 0 && item.Qty >= item.MaxStock) {
+                Swal.fire({ title: 'Limit Reached', text: 'Only ' + item.MaxStock + ' items available in stock!', icon: 'warning', toast: true, position: 'top-end', showConfirmButton: false, timer: 2000 });
+                return;
+            }
+            item.Qty += amount;
+            if (item.Qty <= 0) cart.splice(index, 1);
+            renderCart();
+        }
+
+        function removeItem(index) { cart.splice(index, 1); renderCart(); }
+        function clearCart() { cart = []; renderCart(); $('#customerName').val(''); }
+
+        function saveBill() {
+            // ... (Keep existing saveBill code exactly as it is) ...
+            if (cart.length === 0) return Swal.fire('Empty Cart', 'Please add products first.', 'warning');
+
+            let sub = parseFloat($('#lblSub').text().replace('₹', ''));
+            let tax = parseFloat($('#lblTax').text().replace('₹', ''));
+            let total = parseFloat($('#lblTotal').text().replace('₹', ''));
+
+            let btn = $('button[onclick="saveBill()"]');
+            btn.prop('disabled', true).html('<i class="fa-solid fa-spinner fa-spin"></i> Processing...');
+
+            $.post('/POS/SaveSale', {
+                customerName: $('#customerName').val(),
+                subTotal: sub, taxAmount: tax, grandTotal: total, paymentMethod: $('#paymentMethod').val(),
+                cartJson: JSON.stringify(cart) // <--- ADD THIS LINE
+            }, function (res) {
+         
+                btn.prop('disabled', false).html('<i class="fa-solid fa-check-circle me-2"></i> Pay & Save');
+                if (res.success) {
+                    Swal.fire({ title: 'Success!', text: 'Invoice ' + res.invoiceNo + ' saved.', icon: 'success', timer: 2000, showConfirmButton: false });
+                    clearCart();
+                } else {
+                    Swal.fire('Error', res.message, 'error');
+                }
+            });
+        }
+    </script>
+}

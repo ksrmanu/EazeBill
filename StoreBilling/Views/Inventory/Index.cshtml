@@ -1,0 +1,56 @@
+﻿@{ ViewBag.Title = "Stock Overview"; }
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h4 class="mb-0 fw-bold"><i class="fa-solid fa-boxes-stacked text-primary me-2"></i>Inventory Overview</h4>
+        <p class="text-muted small mb-0">Real-time stock levels calculated from your ledger.</p>
+    </div>
+    <a href="/Products/Create" class="btn btn-primary"><i class="fa-solid fa-plus me-2"></i>Add New Product</a>
+</div>
+
+<div class="card-modern">
+    <div class="table-responsive">
+        <table id="tblInventory" class="table table-modern w-100 align-middle">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Current Stock</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+@section scripts {
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" />
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
+    <script>$(function () {
+            $('#tblInventory').DataTable({
+                ajax: { url: '/Inventory/GetStockList', type: 'GET' },
+                columns: [
+                    { data: 'Code', className: 'fw-bold text-muted' },
+                    { data: 'Name', className: 'fw-bold text-dark' },
+                    { data: 'SellingRate', render: $.fn.dataTable.render.number(',', '.', 2, '₹') },
+                    {
+                        data: 'CurrentStock',
+                        className: 'fw-bold fs-5',
+                        render: function(data) { return data > 0 ? data : '<span class="text-danger">0</span>'; }
+                    },
+                    {
+                        data: 'Status',
+                        render: function (data) {
+                            if (data === 'In Stock') return '<span class="badge bg-success">In Stock</span>';
+                            if (data === 'Low Stock') return '<span class="badge bg-warning text-dark">Low Stock</span>';
+                            return '<span class="badge bg-danger">Out of Stock</span>';
+                        }
+                    }
+                ],
+                order: [[3, 'asc']] // Sort by lowest stock first
+            });
+        });</script>
+}

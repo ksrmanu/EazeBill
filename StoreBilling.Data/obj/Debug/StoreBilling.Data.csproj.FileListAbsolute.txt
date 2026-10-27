@@ -1,0 +1,12 @@
+D:\KAVITHA\StoreBilling\StoreBilling.Data\bin\Debug\StoreBilling.Data.dll
+D:\KAVITHA\StoreBilling\StoreBilling.Data\bin\Debug\StoreBilling.Data.pdb
+D:\KAVITHA\StoreBilling\StoreBilling.Data\obj\Debug\StoreBilling.Data.csproj.AssemblyReference.cache
+D:\KAVITHA\StoreBilling\StoreBilling.Data\obj\Debug\StoreBilling.Data.csproj.CoreCompileInputs.cache
+D:\KAVITHA\StoreBilling\StoreBilling.Data\obj\Debug\StoreBilling.Data.dll
+D:\KAVITHA\StoreBilling\StoreBilling.Data\obj\Debug\StoreBilling.Data.pdb
+D:\KAVITHA\StoreBilling\StoreBilling.Data\bin\Debug\StoreBilling.Data.dll.config
+D:\KAVITHA\StoreBilling\StoreBilling.Data\bin\Debug\EntityFramework.dll
+D:\KAVITHA\StoreBilling\StoreBilling.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\KAVITHA\StoreBilling\StoreBilling.Data\bin\Debug\EntityFramework.xml
+D:\KAVITHA\StoreBilling\StoreBilling.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\KAVITHA\StoreBilling\StoreBilling.Data\obj\Debug\StoreBil.9EE6CD67.Up2Date

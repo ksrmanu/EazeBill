@@ -1,0 +1,151 @@
+﻿@model StoreBilling.Models.ViewModels.DashboardViewModel
+@{ ViewBag.Title = "Dashboard"; }
+
+<!-- Welcome Banner -->
+<div class="welcome-banner">
+    <div>
+        <h3>Welcome back, @User.Identity.Name!</h3>
+        <p>Here's what's happening with your store today.</p>
+    </div>
+    <div class="banner-stats d-none d-md-flex">
+        <div class="banner-stat-item">
+            <h2>@Model.TodaySales.ToString("N0")</h2>
+            <span>Total Sales</span>
+        </div>
+        <div class="banner-stat-item">
+            <h2>@Model.LowStockCount</h2>
+            <span>Low Stock</span>
+        </div>
+        <div class="banner-stat-item">
+            <h2>0</h2>
+            <span>Out of Stock</span>
+        </div>
+    </div>
+</div>
+
+<!-- Stat Cards -->
+<div class="row g-4 mb-4">
+    <div class="col-md-3">
+        <div class="stat-card">
+            <div class="stat-trend trend-up"><i class="fa-solid fa-arrow-up"></i> 8.2%</div>
+            <div class="stat-icon green"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+            <div class="stat-value">₹@Model.TodaySales.ToString("N0")</div>
+            <div class="stat-title">Total Sales</div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="stat-card">
+            <div class="stat-trend trend-up"><i class="fa-solid fa-arrow-up"></i> 12.5%</div>
+            <div class="stat-icon blue"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="stat-value">₹@Model.TodayPurchases.ToString("N0")</div>
+            <div class="stat-title">Purchases</div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="stat-card">
+            <div class="stat-trend trend-down"><i class="fa-solid fa-arrow-down"></i> 3.2%</div>
+            <div class="stat-icon pink"><i class="fa-solid fa-wallet"></i></div>
+            <div class="stat-value">₹@Model.TotalReceivables.ToString("N0")</div>
+            <div class="stat-title">Receivables</div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="stat-card">
+            <div class="stat-trend trend-up"><i class="fa-solid fa-arrow-up"></i> 10.4%</div>
+            <div class="stat-icon orange"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <div class="stat-value">@Model.LowStockCount</div>
+            <div class="stat-title">Low Stock Items</div>
+        </div>
+    </div>
+</div>
+
+<!-- Charts & Tables -->
+<div class="row g-4">
+    <div class="col-md-8">
+        <div class="card-modern h-100">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h5 class="fw-bold mb-0">Sales Statistics</h5>
+                <select class="form-select form-select-sm w-auto border-0 bg-light fw-bold">
+                    <option>Last 7 Days</option>
+                    <option>This Month</option>
+                </select>
+            </div>
+            <canvas id="salesChart" style="max-height: 300px;"></canvas>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card-modern h-100 p-0">
+            <div class="p-4 border-bottom d-flex justify-content-between align-items-center">
+                <h5 class="fw-bold mb-0">Recent Sales</h5>
+                <a href="/Reports" class="text-primary text-decoration-none small fw-bold">View All</a>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-modern mb-0">
+                    <tbody>
+                        @if (Model.RecentSales.Count == 0)
+                        {
+                            <tr><td class="text-center text-muted py-4">No recent sales.</td></tr>
+                        }
+                        @foreach (var sale in Model.RecentSales)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="fw-bold text-dark">@sale.InvoiceNo</div>
+                                    <div class="text-muted small">Just now</div>
+                                </td>
+                                <td class="fw-bold">₹@sale.Amount.ToString("N0")</td>
+                                <td class="text-end">
+                                    <span class="badge rounded-pill @(sale.Status == "Paid" ? "bg-success" : "bg-warning text-dark")">@sale.Status</span>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        var chartLabels = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.ChartLabels));
+        var chartValues = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.ChartValues));
+
+        const ctx = document.getElementById('salesChart').getContext('2d');
+
+        // Create a beautiful gradient for the chart
+        let gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, 'rgba(16, 185, 129, 0.2)'); // Light green
+        gradient.addColorStop(1, 'rgba(16, 185, 129, 0)');   // Transparent
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: chartLabels,
+                datasets: [{
+                    label: 'Sales',
+                    data: chartValues,
+                    borderColor: '#10b981',
+                    backgroundColor: gradient,
+                    borderWidth: 3,
+                    pointBackgroundColor: '#fff',
+                    pointBorderColor: '#10b981',
+                    pointBorderWidth: 2,
+                    pointRadius: 4,
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { beginAtZero: true, grid: { borderDash: [5, 5], color: '#f1f5f9' }, border: {display: false} },
+                    x: { grid: { display: false }, border: {display: false} }
+                }
+            }
+        });
+    </script>
+}

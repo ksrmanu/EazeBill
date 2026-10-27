@@ -1,0 +1,30 @@
+﻿@{ ViewBag.Title = "Customers"; }
+<div class="d-flex justify-content-between mb-3">
+    <h4 class="fw-bold">Customers</h4>
+    <a href="/Customers/Create" class="btn btn-primary"><i class="fa fa-plus"></i> Add Customer</a>
+</div>
+<div class="card">
+    <table id="tbl" class="table table-hover">
+        <thead>
+            <tr><th>Code</th><th>Name</th><th>Mobile</th><th>Actions</th></tr>
+        </thead>
+    </table>
+</div>
+@section scripts {
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" />
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        $(function () {
+            $('#tbl').DataTable({
+                ajax: { url: '/Customers/GetList', type: 'GET' },
+                columns: [
+                    { data: 'Code' },
+                    { data: 'Name' },
+                    { data: 'Mobile' },
+                    { data: 'Id', render: id => `<a href="/Customers/Edit/${id}" class="btn btn-sm btn-primary">Edit</a>` }
+                ]
+            });
+        });
+    </script>
+}

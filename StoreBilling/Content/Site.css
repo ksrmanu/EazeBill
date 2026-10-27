@@ -1,0 +1,400 @@
+﻿:root {
+    --primary: #10b981; /* Elegant Emerald Green */
+    --primary-dark: #047857;
+    --bg-color: #f8fafc; /* Very light gray/blue */
+    --sidebar-width: 260px;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    color: var(--text-main);
+    margin: 0;
+}
+
+/* --- Layout --- */
+.app-wrapper {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Main Content pushed to the right */
+.main-content {
+    margin-left: 260px !important; /* Forces it to the right of the sidebar */
+    width: calc(100% - 260px) !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Sidebar --- 
+.sidebar {
+    width: var(--sidebar-width);
+    background: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    z-index: 1000;
+}*/
+/* Sidebar Fixed to the left */
+.sidebar {
+    width: 260px;
+    background: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    z-index: 1000;
+}
+.sidebar-brand {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-main);
+    border-bottom: 1px solid #e2e8f0;
+    text-decoration: none;
+}
+
+    .sidebar-brand i {
+        color: var(--primary);
+        margin-right: 10px;
+        font-size: 1.5rem;
+    }
+
+.sidebar-menu {
+    padding: 15px 12px;
+}
+
+.nav-section {
+    padding: 15px 12px 5px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    transition: 0.2s;
+}
+
+    .sidebar-menu a:hover {
+        background-color: #f1f5f9;
+        color: var(--text-main);
+    }
+
+    .sidebar-menu a.active {
+        background-color: #ecfdf5;
+        color: var(--primary-dark);
+        font-weight: 700;
+    }
+
+    .sidebar-menu a i {
+        width: 24px;
+        font-size: 1.1rem;
+    }
+
+/* --- Top Header --- */
+.top-header {
+    height: 70px;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.header-search {
+    background: #f1f5f9;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    width: 300px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* --- Welcome Banner --- */
+.welcome-banner {
+    background: linear-gradient(135deg, #064e3b 0%, #047857 100%);
+    border-radius: 16px;
+    padding: 30px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(4, 120, 87, 0.2);
+    margin-bottom: 24px;
+}
+
+    .welcome-banner h3 {
+        margin: 0 0 5px;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .welcome-banner p {
+        margin: 0;
+        color: #a7f3d0;
+        font-size: 0.95rem;
+    }
+
+.banner-stats {
+    display: flex;
+    gap: 30px;
+}
+
+.banner-stat-item {
+    border-left: 1px solid rgba(255,255,255,0.2);
+    padding-left: 20px;
+}
+
+    .banner-stat-item h2 {
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: 800;
+    }
+
+    .banner-stat-item span {
+        font-size: 0.8rem;
+        color: #a7f3d0;
+    }
+
+/* --- Stat Cards --- */
+.stat-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    border: 1px solid #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.stat-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+    .stat-icon.green {
+        background: #ecfdf5;
+        color: #10b981;
+    }
+
+    .stat-icon.blue {
+        background: #eff6ff;
+        color: #3b82f6;
+    }
+
+    .stat-icon.pink {
+        background: #fdf2f8;
+        color: #ec4899;
+    }
+
+    .stat-icon.orange {
+        background: #fff7ed;
+        color: #f97316;
+    }
+
+.stat-trend {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 20px;
+}
+
+.trend-up {
+    background: #ecfdf5;
+    color: #10b981;
+}
+
+.trend-down {
+    background: #fef2f2;
+    color: #ef4444;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-top: 5px;
+}
+
+.stat-title {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* --- Cards & Tables --- */
+.card-modern {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    margin-bottom: 24px;
+    padding: 24px;
+}
+
+.table-modern th {
+    border-bottom: 2px solid #f1f5f9;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.table-modern td {
+    vertical-align: middle;
+    border-bottom: 1px solid #f1f5f9;
+    padding: 15px 10px;
+    font-size: 0.95rem;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+    .btn-primary:hover {
+        background-color: var(--primary-dark);
+    }
+/* --- POS Product Grid --- */
+.product-grid-container {
+    flex: 1;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+    padding-right: 5px;
+    align-content: start;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 120px;
+}
+
+    .product-card:hover {
+        border-color: var(--primary);
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+        transform: translateY(-2px);
+    }
+
+.product-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+}
+
+.product-stock {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+/* --- POS Search Dropdown --- */
+/* --- POS Search Dropdown --- */
+.search-results-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    z-index: 1050;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+}
+
+.search-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid #f1f5f9;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    border-left: 4px solid transparent; /* Prepare for the highlight */
+}
+
+.search-item-name {
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.search-item-price {
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.search-item-stock {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* 🔥 THE MAGIC: This highlights the active row */
+.search-item:hover,
+.search-item.active {
+    background-color: #ecfdf5; /* Light Emerald Background */
+    border-left: 4px solid var(--primary); /* Thick Green Left Border */
+    transform: translateX(2px); /* Slight nudge effect */
+}
+
+    .search-item.active .search-item-name {
+        color: var(--primary-dark); /* Darker text when selected */
+    }

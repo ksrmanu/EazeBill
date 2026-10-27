@@ -1,0 +1,17 @@
+D:\KAVITHA\StoreBilling\StoreBilling.Services\bin\Debug\StoreBilling.Services.dll
+D:\KAVITHA\StoreBilling\StoreBilling.Services\bin\Debug\StoreBilling.Services.pdb
+D:\KAVITHA\StoreBilling\StoreBilling.Services\obj\Debug\StoreBilling.Services.csproj.AssemblyReference.cache
+D:\KAVITHA\StoreBilling\StoreBilling.Services\obj\Debug\StoreBilling.Services.csproj.CoreCompileInputs.cache
+D:\KAVITHA\StoreBilling\StoreBilling.Services\obj\Debug\StoreBilling.Services.dll
+D:\KAVITHA\StoreBilling\StoreBilling.Services\obj\Debug\StoreBilling.Services.pdb
+D:\KAVITHA\StoreBilling\StoreBilling.Services\bin\Debug\StoreBilling.Services.dll.config
+D:\KAVITHA\StoreBilling\StoreBilling.Services\bin\Debug\EntityFramework.dll
+D:\KAVITHA\StoreBilling\StoreBilling.Services\bin\Debug\EntityFramework.SqlServer.dll
+D:\KAVITHA\StoreBilling\StoreBilling.Services\bin\Debug\StoreBilling.Common.dll
+D:\KAVITHA\StoreBilling\StoreBilling.Services\bin\Debug\StoreBilling.Data.dll
+D:\KAVITHA\StoreBilling\StoreBilling.Services\bin\Debug\StoreBilling.Common.pdb
+D:\KAVITHA\StoreBilling\StoreBilling.Services\bin\Debug\StoreBilling.Data.pdb
+D:\KAVITHA\StoreBilling\StoreBilling.Services\bin\Debug\StoreBilling.Data.dll.config
+D:\KAVITHA\StoreBilling\StoreBilling.Services\bin\Debug\EntityFramework.xml
+D:\KAVITHA\StoreBilling\StoreBilling.Services\bin\Debug\EntityFramework.SqlServer.xml
+D:\KAVITHA\StoreBilling\StoreBilling.Services\obj\Debug\StoreBil.6C939FAE.Up2Date

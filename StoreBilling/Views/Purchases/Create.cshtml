@@ -1,0 +1,129 @@
+﻿
+@{ ViewBag.Title = "New Purchase Entry"; }
+<div class="pos-container" style="height: calc(100vh - 120px);">
+    <div class="pos-left">
+        <div class="card p-3 border-0 shadow-sm mb-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="fw-bold small text-muted">Select Supplier</label>
+                    <select id="ddlSupplier" class="form-select fw-bold"></select>
+                </div>
+                <div class="col-md-6">
+                    <label class="fw-bold small text-muted">Search Product (Press Enter)</label>
+                    <input type="text" id="searchBox" class="form-control" placeholder="Scan or type product name..." />
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-card">
+            <table class="table cart-table mb-0" id="cartTable">
+                <thead>
+                    <tr><th>Product</th><th>Qty</th><th>Cost Rate</th><th class="text-end">Total</th><th></th></tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="5" class="text-center text-muted py-5"><i class="fa-solid fa-boxes-packing fa-3x mb-3 text-light"></i><br>No items added. Search above to add.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="pos-right">
+        <div class="summary-card">
+            <h5 class="fw-bold mb-3 border-bottom pb-2">Purchase Summary</h5>
+            <div class="d-flex justify-content-between align-items-center mb-4 mt-4">
+                <span class="fs-5 fw-bold">Total Amount</span>
+                <span class="summary-total" id="lblTotal">₹0.00</span>
+            </div>
+            <button class="btn btn-primary w-100 py-3 fs-5 rounded-3 shadow-sm" onclick="savePurchase()">
+                <i class="fa-solid fa-floppy-disk me-2"></i> Save Purchase
+            </button>
+            <a href="/Purchases" class="btn btn-outline-secondary w-100 mt-2 rounded-3">Back to Register</a>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>let cart = [];
+
+    $(function() {
+        // Load Suppliers
+        $.get('/Purchases/GetSuppliers', function(data) {
+            let ddl = $('#ddlSupplier');
+            ddl.append('<option value="">-- Select Supplier --</option>');
+            data.forEach(s => ddl.append(`<option value="${s.Id}">${s.Name}</option>`));
+        });
+    });
+
+    // Search Product
+    $('#searchBox').on('keypress', function (e) {
+        if (e.which === 13) {
+            let term = $(this).val().trim();
+            if(!term) return;
+            $.get('/Purchases/SearchProduct', { term: term }, function (data) {
+                if (data.length > 0) {
+                    addToCart(data[0]);
+                    $('#searchBox').val('');
+                } else {
+                    Swal.fire('Not Found', 'Product not found.', 'error');
+                }
+            });
+        }
+    });
+
+    function addToCart(prod) {
+        let ex = cart.find(c => c.Id === prod.Id);
+        if (ex) { ex.Qty++; ex.Total = ex.Qty * ex.Rate; }
+        else { cart.push({ Id: prod.Id, Name: prod.Name, Rate: prod.PurchaseRate, Qty: 1, Total: prod.PurchaseRate }); }
+        render();
+    }
+
+    function render() {
+        let tbody = $('#cartTable tbody'); tbody.empty(); let total = 0;
+        if(cart.length === 0) {
+            tbody.append(`<tr><td colspan="5" class="text-center text-muted py-5">No items added.</td></tr>`);
+        } else {
+            cart.forEach((item, index) => {
+                total += item.Total;
+                tbody.append(`
+                    <tr>
+                        <td class="fw-bold">${item.Name}</td>
+                        <td><input type="number" class="form-control form-control-sm" style="width:80px" value="${item.Qty}" onchange="updateQty(${index}, this.value)" min="1"/></td>
+                        <td><input type="number" class="form-control form-control-sm" style="width:100px" value="${item.Rate}" onchange="updateRate(${index}, this.value)" step="0.01"/></td>
+                        <td class="text-end fw-bold">₹${item.Total.toFixed(2)}</td>
+                        <td><button class="btn btn-sm btn-light text-danger" onclick="removeItem(${index})"><i class="fa-solid fa-xmark"></i></button></td>
+                    </tr>
+                `);
+            });
+        }
+        $('#lblTotal').text('₹' + total.toFixed(2));
+    }
+
+    function updateQty(i, v) { cart[i].Qty = parseInt(v); cart[i].Total = cart[i].Qty * cart[i].Rate; render(); }
+    function updateRate(i, v) { cart[i].Rate = parseFloat(v); cart[i].Total = cart[i].Qty * cart[i].Rate; render(); }
+    function removeItem(i) { cart.splice(i, 1); render(); }
+
+    function savePurchase() {
+        let supplierId = $('#ddlSupplier').val();
+        let total = parseFloat($('#lblTotal').text().replace('₹', ''));
+
+        if (!supplierId) return Swal.fire('Warning', 'Please select a supplier.', 'warning');
+        if (cart.length === 0) return Swal.fire('Empty', 'Add some products first.', 'warning');
+
+        let btn = $('button[onclick="savePurchase()"]');
+        btn.prop('disabled', true).html('<i class="fa-solid fa-spinner fa-spin"></i> Saving...');
+
+        $.ajax({
+            url: '/Purchases/SavePurchase',
+            type: 'POST',
+            data: { supplierId: supplierId, grandTotal: total, items: cart },
+            success: function (res) {
+                btn.prop('disabled', false).html('<i class="fa-solid fa-floppy-disk me-2"></i> Save Purchase');
+                if (res.success) {
+                    Swal.fire('Success', res.message, 'success').then(() => window.location.href = '/Purchases');
+                } else {
+                    Swal.fire('Error', res.message, 'error');
+                }
+            }
+        });
+    }</script>
+}

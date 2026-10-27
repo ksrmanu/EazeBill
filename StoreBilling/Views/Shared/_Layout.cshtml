@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - EazeBill</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" />
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <a href="/" class="sidebar-brand"><i class="fa-solid fa-leaf"></i> EazeBill</a>
+            <div class="sidebar-menu">
+                <div class="nav-section">MAIN</div>
+                <a href="/" class="active"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+                <a href="/Inventory"><i class="fa-solid fa-boxes-stacked"></i> Inventory</a>
+                <a href="/Purchases"><i class="fa-solid fa-cart-shopping"></i> Purchases</a>
+                <a href="/Sales"><i class="fa-solid fa-file-invoice-dollar"></i> Sales</a>
+                <a href="/POS"><i class="fa-solid fa-cash-register"></i> POS Billing</a>
+
+                <div class="nav-section">FINANCE</div>
+                <a href="/Accounts" class="..."><i class="fa-solid fa-wallet"></i> Accounts & Day Book</a>
+
+                <div class="nav-section">CRM</div>
+                <a href="/Customers"><i class="fa-solid fa-users"></i> Customers</a>
+                <a href="/Suppliers"><i class="fa-solid fa-truck"></i> Suppliers</a>
+
+                <div class="nav-section">ANALYTICS</div>
+                <a href="/Reports"><i class="fa-solid fa-chart-pie"></i> Reports</a>
+
+                <div class="nav-section">ADMIN</div>
+                <a href="/Settings"><i class="fa-solid fa-gear"></i> Settings</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="d-flex align-items-center gap-3">
+                    <i class="fa-solid fa-bars text-muted fs-5 cursor-pointer"></i>
+                    <input type="text" class="header-search" placeholder="Search products, customers, invoices..." />
+                </div>
+
+                <div class="d-flex align-items-center gap-4">
+                    <i class="fa-regular fa-bell text-muted fs-5"></i>
+
+                    <div class="d-flex align-items-center gap-2 border-start ps-4">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 35px; height: 35px;">
+                            @(User.Identity.Name.Substring(0,1).ToUpper())
+                        </div>
+                        <div>
+                            <div class="fw-bold fs-6" style="line-height: 1.2;">@User.Identity.Name</div>
+                            <div class="text-muted" style="font-size: 0.75rem;">Administrator</div>
+                        </div>
+                    </div>
+
+                    @using (Html.BeginForm("Logout", "Account", FormMethod.Post, new { @class = "m-0" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-sm btn-light text-danger" title="Logout">
+                            <i class="fa-solid fa-power-off"></i>
+                        </button>
+                    }
+                </div>
+            </header>
+
+            <main class="p-4">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

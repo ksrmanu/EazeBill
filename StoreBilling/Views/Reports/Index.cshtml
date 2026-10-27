@@ -1,0 +1,109 @@
+﻿@{ ViewBag.Title = "Reports"; }
+
+<div class="card border-0 shadow-sm mb-4">
+    <div class="card-body">
+        <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <button class="nav-link active fw-bold" data-bs-toggle="pill" data-bs-target="#salesTab">Sales Report</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link fw-bold" data-bs-toggle="pill" data-bs-target="#stockTab">Stock Report</button>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <!-- Sales Report Tab -->
+            <div class="tab-pane fade show active" id="salesTab">
+                <div class="row mb-3 align-items-end">
+                    <div class="col-md-3">
+                        <label class="text-muted small fw-bold">From Date</label>
+                        <input type="date" id="startDate" class="form-control" value="@DateTime.Today.AddDays(-30).ToString("yyyy-MM-dd")" />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="text-muted small fw-bold">To Date</label>
+                        <input type="date" id="endDate" class="form-control" value="@DateTime.Today.ToString("yyyy-MM-dd")" />
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary w-100" onclick="loadSales()"><i class="fa-solid fa-filter"></i> Filter</button>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table id="tblSales" class="table table-hover table-striped w-100">
+                        <thead class="table-light">
+                            <tr><th>Invoice No</th><th>Date</th><th>Customer</th><th>Payment Mode</th><th>Subtotal</th><th>Tax</th><th>Total</th></tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Stock Report Tab -->
+            <div class="tab-pane fade" id="stockTab">
+                <div class="table-responsive mt-3">
+                    <table id="tblStock" class="table table-hover table-striped w-100">
+                        <thead class="table-light">
+                            <tr><th>Code</th><th>Product Name</th><th>Selling Rate</th><th>MRP</th><th>Current Stock</th><th>Stock Value (Cost)</th></tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <!-- DataTables & Export Buttons -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.bootstrap5.min.css" />
+
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
+    <!-- Export buttons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
+
+    <script>let salesTable, stockTable;
+
+        $(function () {
+            // Init Sales Table
+            salesTable = $('#tblSales').DataTable({
+                dom: 'Bfrtip',
+                buttons: ['excelHtml5', 'csvHtml5', 'pdfHtml5', 'print'],
+                ajax: {
+                    url: '/Reports/GetSalesReport',
+                    data: function(d) { d.startDate = $('#startDate').val(); d.endDate = $('#endDate').val(); }
+                },
+                columns: [
+                    { data: 'InvoiceNo' },
+                    { data: 'Date', render: d => new Date(parseInt(d.substr(6))).toLocaleDateString() },
+                    { data: 'CustomerName' },
+                    { data: 'PaymentMethod', render: d => `<span class="badge bg-secondary">${d}</span>` },
+                    { data: 'SubTotal', render: $.fn.dataTable.render.number(',', '.', 2, '₹') },
+                    { data: 'TaxAmount', render: $.fn.dataTable.render.number(',', '.', 2, '₹') },
+                    { data: 'GrandTotal', className: 'fw-bold text-primary', render: $.fn.dataTable.render.number(',', '.', 2, '₹') }
+                ]
+            });
+
+            // Init Stock Table
+            stockTable = $('#tblStock').DataTable({
+                dom: 'Bfrtip',
+                buttons: ['excelHtml5', 'print'],
+                ajax: { url: '/Reports/GetStockReport' },
+                columns: [
+                    { data: 'Code' }, { data: 'Name' },
+                    { data: 'SellingRate', render: $.fn.dataTable.render.number(',', '.', 2, '₹') },
+                    { data: 'MRP', render: $.fn.dataTable.render.number(',', '.', 2, '₹') },
+                    { data: 'Stock', className: 'fw-bold' },
+                    { data: 'Stock', render: (d, t, r) => '₹' + (d * r.SellingRate).toFixed(2) } // Approx value
+                ]
+            });
+        });
+
+        function loadSales() {
+            salesTable.ajax.reload();
+        }</script>
+}

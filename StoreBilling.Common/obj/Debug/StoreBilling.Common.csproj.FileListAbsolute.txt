@@ -1,0 +1,6 @@
+D:\KAVITHA\StoreBilling\StoreBilling.Common\bin\Debug\StoreBilling.Common.dll
+D:\KAVITHA\StoreBilling\StoreBilling.Common\bin\Debug\StoreBilling.Common.pdb
+D:\KAVITHA\StoreBilling\StoreBilling.Common\obj\Debug\StoreBilling.Common.csproj.AssemblyReference.cache
+D:\KAVITHA\StoreBilling\StoreBilling.Common\obj\Debug\StoreBilling.Common.csproj.CoreCompileInputs.cache
+D:\KAVITHA\StoreBilling\StoreBilling.Common\obj\Debug\StoreBilling.Common.dll
+D:\KAVITHA\StoreBilling\StoreBilling.Common\obj\Debug\StoreBilling.Common.pdb

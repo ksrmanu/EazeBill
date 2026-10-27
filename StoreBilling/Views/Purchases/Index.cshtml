@@ -1,0 +1,27 @@
+﻿
+@{ ViewBag.Title = "Purchase Register"; }
+<div class="d-flex justify-content-between mb-4">
+    <h4 class="fw-bold"><i class="fa-solid fa-file-lines text-primary me-2"></i>Purchase Register</h4>
+    <a href="/Purchases/Create" class="btn btn-primary"><i class="fa-solid fa-plus me-2"></i>New Purchase</a>
+</div>
+<div class="card-modern">
+    <table id="tbl" class="table table-modern w-100">
+        <thead><tr><th>Invoice No</th><th>Date</th><th>Supplier</th><th>Total Amount</th></tr></thead>
+    </table>
+</div>
+@section scripts {
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" />
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script>$(function () {
+            $('#tbl').DataTable({
+                ajax: { url: '/Purchases/GetList' },
+                columns: [
+                    { data: 'InvoiceNo', className: 'fw-bold' },
+                    { data: 'Date', render: d => new Date(parseInt(d.substr(6))).toLocaleDateString() },
+                    { data: 'Supplier' },
+                    { data: 'GrandTotal', render: $.fn.dataTable.render.number(',', '.', 2, '₹') }
+                ]
+            });
+        });</script>
+}

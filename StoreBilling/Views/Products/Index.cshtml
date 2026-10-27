@@ -1,0 +1,37 @@
+﻿@{ ViewBag.Title = "Product Master"; }
+<div class="d-flex justify-content-between mb-3">
+    <h4 class="fw-bold">Products</h4>
+    <a href="/Products/Create" class="btn btn-primary"><i class="fa fa-plus"></i> Add Product</a>
+</div>
+<div class="card">
+    <table id="tbl" class="table table-hover">
+        <thead><tr><th>Code</th><th>Name</th><th>Selling Rate</th><th>MRP</th><th>Status</th><th>Actions</th></tr></thead>
+    </table>
+</div>
+@section scripts {
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" />
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        $(function () {
+            var tbl = $('#tbl').DataTable({
+                ajax: { url: '/Products/GetList', type: 'GET' },
+                columns: [
+                    { data: 'Code' }, { data: 'Name' },
+                    { data: 'SellingRate', render: $.fn.dataTable.render.number(',', '.', 2, '₹') },
+                    { data: 'MRP', render: $.fn.dataTable.render.number(',', '.', 2, '₹') },
+                    { data: 'IsActive', render: d => d ? '<span class="badge bg-success">Active</span>' : '<span class="badge bg-secondary">Inactive</span>' },
+                    {
+                        data: 'Id', render: id => `<a href="/Products/Edit/${id}" class="btn btn-sm btn-primary">Edit</a>
+                            <button class="btn btn-sm btn-danger" onclick="del(${id})">Delete</button>`
+                    }
+                ]
+            });
+        });
+        function del(id) {
+            Swal.fire({ title: 'Delete?', icon: 'warning', showCancelButton: true }).then(r => {
+                if (r.isConfirmed) $.post('/Products/Delete', { id: id }, () => $('#tbl').DataTable().ajax.reload());
+            });
+        }
+    </script>
+}
